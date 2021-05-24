@@ -12,15 +12,20 @@ const updateColor = (dummy, color) => ({
 	color,
 });
 
-const addButton = ({ state }) => ({
+const addTodo = ({ state }) => ({
 	todos: TodoManager.addTodo(state.todos, state.input),
 });
 
+const toggleTodo = ({ state }, todo) => ({
+	todos: TodoManager.toggleTodo(state.todos, todo),
+});
+
 const actions = {
-	addButton,
+	addTodo,
 	increaseCount,
 	updateInput,
 	updateColor,
+	toggleTodo,
 };
 
 export default actions;
