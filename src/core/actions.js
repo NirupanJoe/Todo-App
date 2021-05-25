@@ -20,12 +20,17 @@ const toggleTodo = ({ state }, todo) => ({
 	todos: TodoManager.toggleTodo(state.todos, todo),
 });
 
+const removeTodo = ({ state }, todo) => ({
+	todos: TodoManager.removeTodo(state.todos, todo),
+});
+
 const actions = {
 	addTodo,
 	increaseCount,
 	updateInput,
 	updateColor,
 	toggleTodo,
+	removeTodo,
 };
 
 export default actions;

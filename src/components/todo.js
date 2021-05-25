@@ -27,6 +27,10 @@ const Todo = (todo) => {
 				onChange={ () => context.actions.toggleTodo(todo) }
 			/>
 			<span>{ text }</span>
+			<span>
+				<button onClick={ () => context.actions.removeTodo(todo) }>
+					X</button>
+			</span>
 		</div>
 	);
 };
