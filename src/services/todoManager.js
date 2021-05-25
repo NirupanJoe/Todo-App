@@ -20,10 +20,17 @@ const toggleTodo = (todos, data) => todos.map((todo) => (todo.id !== data.id
 const removeTodo = (todos, data) =>
 	todos.filter((todo) => todo.id !== data.id);
 
+const toggleTodos = (todos, isChecked) =>
+	todos.map((todo) => ({
+		...todo,
+		completed: isChecked,
+	}));
+
 const TodoManager = {
 	addTodo,
 	toggleTodo,
 	removeTodo,
+	toggleTodos,
 };
 
 export default TodoManager;

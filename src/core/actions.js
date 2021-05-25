@@ -24,6 +24,9 @@ const removeTodo = ({ state }, todo) => ({
 	todos: TodoManager.removeTodo(state.todos, todo),
 });
 
+const toggleTodos = ({ state }, isChecked) => ({
+	todos: TodoManager.toggleTodos(state.todos, isChecked),
+});
 const actions = {
 	addTodo,
 	increaseCount,
@@ -31,6 +34,7 @@ const actions = {
 	updateColor,
 	toggleTodo,
 	removeTodo,
+	toggleTodos,
 };
 
 export default actions;
