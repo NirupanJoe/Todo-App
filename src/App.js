@@ -5,6 +5,8 @@ import TodoInput from './components/todoInput';
 import AddTodo from './components/addTodo';
 import AddList from './components/todoList';
 import ToggleAllButton from './components/toggleAllButton';
+import ClearButton from './components/clearButton';
+
 const App = () => {
 	// eslint-disable-next-line no-console
 	console.log(context.state);
@@ -13,6 +15,7 @@ const App = () => {
 			<div> { ToggleAllButton() } { TodoInput() } </div>
 			<div> { AddTodo() } </div>
 			<div> { AddList() } </div>
+			<div> { ClearButton() } </div>
 			<div>Refresh ID: { context.state.refreshID }</div>
 		</div>
 	);
