@@ -32,6 +32,10 @@ const clearButton = ({ state }) => ({
 	todos: TodoManager.clearButton(state.todos),
 });
 
+const filterButton = (dummy, filter) => ({
+	filter,
+});
+
 const actions = {
 	addTodo,
 	increaseCount,
@@ -41,6 +45,7 @@ const actions = {
 	removeTodo,
 	toggleTodos,
 	clearButton,
+	filterButton,
 };
 
 export default actions;

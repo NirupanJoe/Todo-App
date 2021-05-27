@@ -6,6 +6,7 @@ import AddTodo from './components/addTodo';
 import AddList from './components/todoList';
 import ToggleAllButton from './components/toggleAllButton';
 import ClearButton from './components/clearButton';
+import FilterBar from './components/filterBar';
 
 const App = () => {
 	// eslint-disable-next-line no-console
@@ -16,6 +17,7 @@ const App = () => {
 			<div> { AddTodo() } </div>
 			<div> { AddList() } </div>
 			<div> { ClearButton() } </div>
+			<div> { FilterBar() } </div>
 			<div>Refresh ID: { context.state.refreshID }</div>
 		</div>
 	);
