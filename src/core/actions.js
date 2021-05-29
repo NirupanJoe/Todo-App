@@ -4,8 +4,8 @@ const increaseCount = ({ state }) => ({
 	count: state.count + 1,
 });
 
-const updateInput = (dummy, evt) => ({
-	input: evt.target.value,
+const updateInput = (dummy, input) => ({
+	input,
 });
 
 const updateColor = (dummy, color) => ({
@@ -13,6 +13,7 @@ const updateColor = (dummy, color) => ({
 });
 
 const addTodo = ({ state }) => ({
+	input: '',
 	todos: TodoManager.addTodo(state.todos, state.input),
 });
 

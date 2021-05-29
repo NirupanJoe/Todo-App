@@ -13,8 +13,7 @@ const App = () => {
 	console.log(context.state);
 	return (
 		<div style={ { background: context.state.color } } className="App">
-			<div> { ToggleAllButton() } { TodoInput() } </div>
-			<div> { AddTodo() } </div>
+			<div> { ToggleAllButton() } { TodoInput() } { AddTodo() } </div>
 			<div> { AddList() } </div>
 			<div> { ClearButton() } </div>
 			<div> { FilterBar() } </div>
