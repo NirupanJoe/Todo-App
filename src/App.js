@@ -7,13 +7,16 @@ import AddList from './components/todoList';
 import ToggleAllButton from './components/toggleAllButton';
 import ClearButton from './components/clearButton';
 import FilterBar from './components/filterBar';
+import EditButton from './components/editButton';
 
 const App = () => {
 	// eslint-disable-next-line no-console
 	console.log(context.state);
 	return (
 		<div style={ { background: context.state.color } } className="App">
-			<div> { ToggleAllButton() } { TodoInput() } { AddTodo() } </div>
+			<div> { ToggleAllButton() }
+				{ TodoInput() } { AddTodo() } { EditButton() }
+			</div>
 			<div> { AddList() } </div>
 			<div> { ClearButton() } </div>
 			<div> { FilterBar() } </div>

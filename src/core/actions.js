@@ -37,6 +37,19 @@ const filterButton = (dummy, filter) => ({
 	filter,
 });
 
+const setEditing = (context, todo) => ({
+	input: todo.text,
+	editing: todo,
+});
+
+const editingTodo = ({ state }) => ({
+	input: '',
+	editing: null,
+	todos: TodoManager.editingTodo(
+		state.todos, state.editing, state.input
+	),
+});
+
 const actions = {
 	addTodo,
 	increaseCount,
@@ -47,6 +60,8 @@ const actions = {
 	toggleTodos,
 	clearButton,
 	filterButton,
+	setEditing,
+	editingTodo,
 };
 
 export default actions;

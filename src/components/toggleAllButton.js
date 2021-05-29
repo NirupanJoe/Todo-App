@@ -5,7 +5,7 @@ import TodoManager from '../services/todoManager';
 
 const ToggleAllButton = () => {
 	const isChecked = TodoManager.getActiveCount(context.state.todos) === 0;
-	const noTodos = TodoManager.getCompletedTodo(context.state.todos) === 0;
+	const noTodos = TodoManager.getTodoCount(context.state.todos) === 0;
 
 	return noTodos
 		? null

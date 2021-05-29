@@ -5,7 +5,7 @@ import context from '../core/context';
 import TodoManager from '../services/todoManager';
 
 const ClearButton = () => {
-	const noCompletedTodo = TodoManager.getCompletedTodo(context.state.todos)
+	const noCompletedTodo = TodoManager.getTodoCount(context.state.todos)
 	=== 0;
 
 	return noCompletedTodo

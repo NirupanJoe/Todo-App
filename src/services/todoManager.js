@@ -46,6 +46,17 @@ const filters = {
 const filterTodos = (todos, filter) =>
 	todos.filter(filters[filter]);
 
+const editingTodo = (
+	todos, editing, text
+) =>
+	todos.map((todo) => (todo.id === editing.id
+		? {
+			...todo,
+			text,
+		}
+		: todo
+	));
+
 const TodoManager = {
 	addTodo,
 	toggleTodo,
@@ -56,6 +67,7 @@ const TodoManager = {
 	clearButton,
 	getCompletedTodo,
 	filterTodos,
+	editingTodo,
 };
 
 export default TodoManager;
