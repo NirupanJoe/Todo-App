@@ -2,12 +2,11 @@ import { React } from 'react';
 import './App.css';
 import context from './core/context';
 import TodoInput from './components/todoInput';
-import AddTodo from './components/addTodo';
 import AddList from './components/todoList';
 import ToggleAllButton from './components/toggleAllButton';
 import ClearButton from './components/clearButton';
 import FilterBar from './components/filterBar';
-import EditButton from './components/editButton';
+import ActionButton from './components/actionButton';
 
 const App = () => {
 	// eslint-disable-next-line no-console
@@ -15,7 +14,7 @@ const App = () => {
 	return (
 		<div style={ { background: context.state.color } } className="App">
 			<div> { ToggleAllButton() }
-				{ TodoInput() } { AddTodo() } { EditButton() }
+				{ TodoInput() } { ActionButton() }
 			</div>
 			<div> { AddList() } </div>
 			<div> { ClearButton() } </div>
