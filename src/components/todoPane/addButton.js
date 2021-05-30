@@ -1,7 +1,7 @@
 import { React } from 'react';
-import context from '../core/context';
+import context from '../../core/context';
 
-const AddTodo = () =>
+const AddButton = () =>
 	<button
 		disabled={ context.state.input === '' }
 		onClick={ context.actions.addTodo }
@@ -9,4 +9,4 @@ const AddTodo = () =>
 		+
 	</button>;
 
-export default AddTodo;
+export default AddButton;

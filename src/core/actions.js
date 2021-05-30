@@ -50,6 +50,10 @@ const editingTodo = ({ state }) => ({
 	),
 });
 
+const setTasks = (context, tasks) => ({
+	tasks,
+});
+
 const actions = {
 	addTodo,
 	increaseCount,
@@ -62,6 +66,7 @@ const actions = {
 	filterButton,
 	setEditing,
 	editingTodo,
+	setTasks,
 };
 
 export default actions;
