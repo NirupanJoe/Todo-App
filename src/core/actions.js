@@ -51,8 +51,8 @@ const editingTodo = ({ state }) => ({
 	),
 });
 
-const setTasks = (context, tasks) => ({
-	tasks,
+const addTask = ({ state }, text) => ({
+	tasks: TaskManager.addTask(state.tasks, text),
 });
 
 const removeButton = ({ state }, task) => ({
@@ -75,7 +75,7 @@ const actions = {
 	filterButton,
 	setEditing,
 	editingTodo,
-	setTasks,
+	addTask,
 	removeButton,
 	addTaskFromTodo,
 };
