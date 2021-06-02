@@ -5,12 +5,12 @@ const increaseCount = ({ state }) => ({
 	count: state.count + 1,
 });
 
-const updateInput = (dummy, input) => ({
-	input,
+const updateInput = ({ data }) => ({
+	input: data,
 });
 
-const updateColor = (dummy, color) => ({
-	color,
+const updateColor = ({ data }) => ({
+	color: data,
 });
 
 const addTodo = ({ state }) => ({
@@ -18,29 +18,29 @@ const addTodo = ({ state }) => ({
 	todos: TodoManager.addTodo(state.todos, state.input),
 });
 
-const toggleTodo = ({ state }, todo) => ({
-	todos: TodoManager.toggleTodo(state.todos, todo),
+const toggleTodo = ({ state, data }) => ({
+	todos: TodoManager.toggleTodo(state.todos, data),
 });
 
-const removeTodo = ({ state }, todo) => ({
-	todos: TodoManager.removeTodo(state.todos, todo),
+const removeTodo = ({ state, data }) => ({
+	todos: TodoManager.removeTodo(state.todos, data),
 });
 
-const toggleTodos = ({ state }, isChecked) => ({
-	todos: TodoManager.toggleTodos(state.todos, isChecked),
+const toggleTodos = ({ state, data }) => ({
+	todos: TodoManager.toggleTodos(state.todos, data),
 });
 
 const clearButton = ({ state }) => ({
 	todos: TodoManager.clearButton(state.todos),
 });
 
-const filterButton = (dummy, filter) => ({
-	filter,
+const filterButton = ({ data }) => ({
+	filter: data,
 });
 
-const setEditing = (context, todo) => ({
-	input: todo.text,
-	editing: todo,
+const setEditing = ({ data }) => ({
+	input: data.text,
+	editing: data,
 });
 
 const editingTodo = ({ state }) => ({
@@ -51,16 +51,16 @@ const editingTodo = ({ state }) => ({
 	),
 });
 
-const addTask = ({ state }, text) => ({
-	tasks: TaskManager.addTask(state.tasks, text),
+const addTask = ({ state, data }) => ({
+	tasks: TaskManager.addTask(state.tasks, data),
 });
 
-const removeButton = ({ state }, task) => ({
-	tasks: TaskManager.removeTask(state.tasks, task),
+const removeButton = ({ state, data }) => ({
+	tasks: TaskManager.removeTask(state.tasks, data),
 });
 
-const addTaskFromTodo = ({ state }, task) => ({
-	todos: TodoManager.addTodo(state.todos, task.text),
+const addTaskFromTodo = ({ state, data }) => ({
+	todos: TodoManager.addTodo(state.todos, data.text),
 });
 
 const actions = {
