@@ -1,19 +1,19 @@
 import { React } from 'react';
 import context from '../../core/context';
 
-const sharedStyle = {
-	height: '1em',
-};
+// const sharedStyle = {
+// 	height: '1em',
+// };
 
-const completedStyle = {
-	...sharedStyle,
-	color: 'gray',
-};
+// const completedStyle = {
+// 	...sharedStyle,
+// 	color: 'gray',
+// };
 
-const activeStyle = {
-	...sharedStyle,
-	color: 'black',
-};
+// const activeStyle = {
+// 	...sharedStyle,
+// 	color: 'black',
+// };
 
 const toggleButton = (todo) =>
 	<input
@@ -29,10 +29,10 @@ const removeButton = (todo) =>
 
 const Todo = (todo) => {
 	const { id, text, completed } = todo;
-	const style = completed ? completedStyle : activeStyle ;
+	const className = `todo ${ completed ? 'todo-completed' : 'todo-active' }`;
 
 	return (
-		<div key={ id } style={ style }>
+		<div key={ id } className={ className }>
 			<span>{ toggleButton(todo) }</span>
 			<span
 				onClick={ () => context.actions.setEditing(todo) }

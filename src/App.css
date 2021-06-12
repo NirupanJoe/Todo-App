@@ -1,6 +1,15 @@
 .App {
 	text-align: center;
 }
+.todo {
+	height: 1rem;
+}
+.todo-active {
+	color: black;
+}
+.todo-completed {
+	color: gray;
+}
 
 .App-logo {
 	height: 40vmin;
