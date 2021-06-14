@@ -1,20 +1,6 @@
 import { React } from 'react';
 import context from '../../core/context';
 
-// const sharedStyle = {
-// 	height: '1em',
-// };
-
-// const completedStyle = {
-// 	...sharedStyle,
-// 	color: 'gray',
-// };
-
-// const activeStyle = {
-// 	...sharedStyle,
-// 	color: 'black',
-// };
-
 const toggleButton = (todo) =>
 	<input
 		type="checkbox"
@@ -23,7 +9,10 @@ const toggleButton = (todo) =>
 	/>;
 
 const removeButton = (todo) =>
-	<button onClick={ () => context.actions.removeTodo(todo) }>
+	<button
+		className="btn-x"
+		onClick={ () => context.actions.removeTodo(todo) }
+	>
 		X
 	</button>;
 

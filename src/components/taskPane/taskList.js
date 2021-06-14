@@ -5,7 +5,7 @@ import Task from './task';
 const TaskList = () => {
 	const { tasks } = context.state;
 
-	return	<div>{tasks.map(Task)}</div>;
+	return	<div className="task-list">{tasks.map(Task)}</div>;
 };
 
 export default TaskList;
