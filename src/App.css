@@ -25,9 +25,9 @@
 }
 .btn-x {
 	border: none;
-		background: none;
-		margin-left: 5px;
-		color: rgb(243, 30, 30);
+	background: none;
+	margin-left: 5px;
+	color: rgb(243, 30, 30);
 }
 .btn-x:hover {
 	border: none;
@@ -83,7 +83,9 @@
 	height: 40vmin;
 	pointer-events: none;
 }
-
+h3:hover {
+	animation: h3 2s;
+}
 @media (prefers-reduced-motion: no-preference) {
 	.App-logo {
 		animation: App-logo-spin infinite 20s linear;
@@ -111,5 +113,14 @@
 	}
 	to {
 		transform: rotate(360deg);
+	}
+}
+
+@keyframes h3 {
+	from {
+		font-size: 1.1rem;
+	}
+	to {
+		font-size: 1.7rem;
 	}
 }
