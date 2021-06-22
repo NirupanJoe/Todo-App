@@ -33,6 +33,7 @@
 	border: none;
 	background: none;
 	margin-left: 5px;
+	font-size: large;
 	color: rgb(255, 134, 134);
 }
 .active-btn-filter {
@@ -84,7 +85,7 @@
 	pointer-events: none;
 }
 h3:hover {
-	animation: h3 2s;
+	animation: color infinite 2s linear;
 }
 @media (prefers-reduced-motion: no-preference) {
 	.App-logo {
@@ -116,11 +117,14 @@ h3:hover {
 	}
 }
 
-@keyframes h3 {
-	from {
-		font-size: 1.1rem;
+@keyframes color {
+	0% {
+		color: rgb(15, 179, 179);
 	}
-	to {
-		font-size: 1.7rem;
+	50% {
+		color: rgb(145, 240, 68);
+	}
+	100% {
+		color: #fc7406;
 	}
 }
