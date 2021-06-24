@@ -63,6 +63,10 @@ const addTaskFromTodo = ({ state, data }) => ({
 	todos: TodoManager.addTodo(state.todos, data.text),
 });
 
+const themeSelect = ({ data }) => ({
+	theme: data,
+});
+
 const actions = {
 	addTodo,
 	increaseCount,
@@ -78,6 +82,7 @@ const actions = {
 	addTask,
 	removeButton,
 	addTaskFromTodo,
+	themeSelect,
 };
 
 export default actions;

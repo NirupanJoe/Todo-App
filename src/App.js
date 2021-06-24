@@ -13,7 +13,7 @@ const App = () => {
 	// eslint-disable-next-line no-console
 	console.log(context.state);
 	return (
-		<div className="App">
+		<div className={ `App ${ context.state.theme }` }>
 			<div> { TodoPane() } { TaskPane() } </div>
 		</div>
 	);

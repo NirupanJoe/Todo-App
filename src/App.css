@@ -1,6 +1,35 @@
 .App {
 	text-align: center;
 }
+.todo-pane {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 50%;
+}
+.light .todo-pane {
+	background: beige;
+}
+.dark .todo-pane{
+	background: rgba(0, 0, 0, 0.623);
+}
+.App.dark {
+	color: white;
+}
+.task-pane {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 50%;
+}
+.light .task-pane {
+	background: bisque;
+}
+.dark .task-pane {
+	background: rgba(11, 5, 5, 0.623);
+}
 .todo {
 	margin: 6px 1px 6px 40%;
 	text-align: left;
