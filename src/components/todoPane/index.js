@@ -9,7 +9,7 @@ import ThemeSelect from './themeSelect';
 const TodoPane = () => {
 
 	return (
-		<div className="todo-pane pane">
+		<div className="pane todo-pane">
 			<h3>Todo</h3>
 			<div> { ToggleAllButton() }
 				{ TodoInput() } { ActionButton() }
