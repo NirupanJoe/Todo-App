@@ -4,7 +4,6 @@ import Button from '@material-ui/core/Button';
 
 const AddButton = () =>
 	<Button
-		style={ { verticalAlign: 'bottom' } }
 		className="btn"
 		variant="contained"
 		color="primary"

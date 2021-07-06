@@ -11,7 +11,7 @@ const TodoPane = () => {
 	return (
 		<div className="pane todo-pane">
 			<h3>Todo</h3>
-			<div> { ToggleAllButton() }
+			<div id="todo-pane-input"> { ToggleAllButton() }
 				{ TodoInput() } { ActionButton() }
 			</div>
 			<div> { AddList() } </div>
