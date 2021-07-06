@@ -2,7 +2,7 @@ import { React } from 'react';
 import context from '../../core/context';
 import TodoManager from '../../services/todoManager';
 import DeleteSweepTwoToneIcon from '@material-ui/icons/DeleteSweepTwoTone';
-import Button from '@material-ui/core/Button';
+import { Button, Box } from '@material-ui/core';
 
 const ClearButton = () => {
 	const noCompletedTodo = TodoManager.getCompletedTodo(context.state.todos)
@@ -10,15 +10,15 @@ const ClearButton = () => {
 
 	return noCompletedTodo
 		? null
-		: <span>
+		: <Box component="span">
 			<Button
-				variant="contained"
+				variant="outline"
 				color="default"
 				onClick={ context.actions.clearButton }
 			>
 				<DeleteSweepTwoToneIcon/>
 			</Button>
-		</span>;
+		</Box>;
 };
 
 export default ClearButton;

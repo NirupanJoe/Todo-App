@@ -1,7 +1,7 @@
 import { React } from 'react';
 import context from '../../core/context';
 import TodoManager from '../../services/todoManager';
-import Checkbox from '@material-ui/core/Checkbox';
+import { Checkbox, Grid } from '@material-ui/core';
 
 const ToggleAllButton = () => {
 	const isChecked = TodoManager.getActiveCount(context.state.todos) === 0;
@@ -9,12 +9,12 @@ const ToggleAllButton = () => {
 
 	return noTodos
 		? null
-		: <span>
+		: <Grid xs={ 2 }>
 			<Checkbox
 				checked={ isChecked }
 				onChange={ () => context.actions.toggleTodos(!isChecked) }
 			/>
-		</span>;
+		</Grid>;
 };
 
 export default ToggleAllButton;
