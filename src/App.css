@@ -118,6 +118,12 @@
 h3:hover {
 	animation: color infinite 2s linear;
 }
+.theme-select {
+	position: fixed;
+	top: 2%;
+	left: 4%;
+}
+
 @media (prefers-reduced-motion: no-preference) {
 	.App-logo {
 		animation: App-logo-spin infinite 20s linear;
