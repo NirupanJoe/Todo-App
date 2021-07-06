@@ -1,9 +1,10 @@
 import { React } from 'react';
 import context from '../../core/context';
+import Checkbox from '@material-ui/core/Checkbox';
 
 const toggleButton = (todo) =>
-	<input
-		type="checkbox"
+	<Checkbox
+		className="todo-checkbox"
 		checked={ todo.completed }
 		onChange={ () => context.actions.toggleTodo(todo) }
 	/>;
