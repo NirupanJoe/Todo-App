@@ -44,7 +44,6 @@
 	border-radius: 5px;
 }
 .btn:hover {
-	color: rgb(96, 159, 231);
 	background: white url('./image/logo192.png') no-repeat center;
 	background-size: 150%;
 	border: 2px solid rgb(96, 159, 231);

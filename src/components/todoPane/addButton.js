@@ -1,13 +1,17 @@
 import { React } from 'react';
 import context from '../../core/context';
+import Button from '@material-ui/core/Button';
 
 const AddButton = () =>
-	<button
+	<Button
+		style={ { verticalAlign: 'bottom' } }
 		className="btn"
+		variant="contained"
+		color="primary"
 		disabled={ context.state.input === '' }
 		onClick={ context.actions.addTodo }
 	>
 		+
-	</button>;
+	</Button>;
 
 export default AddButton;
