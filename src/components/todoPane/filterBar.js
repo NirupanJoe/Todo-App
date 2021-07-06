@@ -1,9 +1,9 @@
 import { React } from 'react';
 import FilterButton from './filterButton';
 
-const Filter = ['all', 'active', 'completed'];
+const filters = ['all', 'active', 'completed'];
 
 const FilterBar = () =>
-	<div> { Filter.map(FilterButton) } </div>;
+	<div> { filters.map((filter) => FilterButton(filter)) } </div>;
 
 export default FilterBar;
