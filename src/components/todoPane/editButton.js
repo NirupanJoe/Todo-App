@@ -1,13 +1,14 @@
 import { React } from 'react';
 import context from '../../core/context';
+import EditIcon from '@material-ui/icons/Edit';
+import Button from '@material-ui/core/Button';
 
 const EditButton = () =>
-	<button
-		className="btn"
+	<Button
 		disabled={ context.state.editing === null }
 		onClick={ context.actions.editingTodo }
 	>
-		ok
-	</button>;
+		<EditIcon/>
+	</Button>;
 
 export default EditButton;
