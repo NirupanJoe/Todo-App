@@ -1,7 +1,7 @@
 import { React } from 'react';
 import context from '../../core/context';
 import TodoManager from '../../services/todoManager';
-import Button from '@material-ui/core/Button';
+import { Button, Box } from '@material-ui/core';
 
 const Color = {
 	all: 'default',
@@ -17,7 +17,7 @@ const FilterButton = (filter) => {
 
 	return noTodos
 		? null
-		: <span>
+		: <Box component="span" m={ 1 }>
 			<Button
 				key={ filter }
 				variant="contained"
@@ -26,7 +26,7 @@ const FilterButton = (filter) => {
 			>
 				{ filter }
 			</Button>
-		</span>;
+		</Box>;
 };
 
 export default FilterButton;
