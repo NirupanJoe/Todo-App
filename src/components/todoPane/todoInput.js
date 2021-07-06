@@ -1,5 +1,6 @@
 import { React } from 'react';
 import context from '../../core/context';
+import TextField from '@material-ui/core/TextField';
 
 const getEnterKeyAction = () =>
 	(context.state.editing ? 'editingTodo' : 'addTodo');
@@ -10,7 +11,8 @@ const actionKeys = {
 };
 
 const TodoInput = () =>
-	<input
+	<TextField
+		label="Text"
 		className="input"
 		value={ context.state.input }
 		onChange={ (evt) => context.actions.updateInput(evt.target.value) }
