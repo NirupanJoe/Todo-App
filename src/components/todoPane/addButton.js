@@ -5,7 +5,6 @@ import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 
 const AddButton = () =>
 	<Button
-		className="btn"
 		variant="contained"
 		color="primary"
 		disabled={ context.state.input === '' }

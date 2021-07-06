@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button';
 
 const EditButton = () =>
 	<Button
+		variant="contained"
 		disabled={ context.state.editing === null }
 		onClick={ context.actions.editingTodo }
 	>

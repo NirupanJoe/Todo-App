@@ -12,6 +12,8 @@ const ClearButton = () => {
 		? null
 		: <span>
 			<Button
+				variant="contained"
+				color="default"
 				onClick={ context.actions.clearButton }
 			>
 				<DeleteSweepTwoToneIcon/>
