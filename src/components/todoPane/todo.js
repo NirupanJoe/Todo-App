@@ -1,6 +1,8 @@
+/* eslint-disable max-len */
 import { React } from 'react';
 import context from '../../core/context';
-import Checkbox from '@material-ui/core/Checkbox';
+import { Checkbox, Grid } from '@material-ui/core';
+import ClearIcon from '@material-ui/icons/Clear';
 
 const toggleButton = (todo) =>
 	<Checkbox
@@ -14,22 +16,27 @@ const removeButton = (todo) =>
 		className="btn-x"
 		onClick={ () => context.actions.removeTodo(todo) }
 	>
-		X
+		<ClearIcon/>
 	</button>;
 
 const Todo = (todo) => {
 	const { id, text, completed } = todo;
-	const className = `todo ${ completed ? 'todo-completed' : 'todo-active' }`;
+	const className = ` ${ completed ? 'todo-completed' : 'todo-active' }`;
 
 	return (
-		<div key={ id } className={ className }>
-			<span>{ toggleButton(todo) }</span>
-			<span
-				onClick={ () => context.actions.setEditing(todo) }
-			>
-				{ text }</span>
-			<span>{ removeButton(todo) }</span>
-		</div>
+		<Grid
+			key={ id }
+			container="container"
+			direction="row"
+			justify="center"
+			alignItems="center"
+			className={ className }
+		>
+			<Grid item="item" xs={ 3 }>{ toggleButton(todo) }</Grid>
+			<Grid item="item" xs={ 3 } onClick={ () => context.actions.setEditing(todo) }>
+				{ text }</Grid>
+			<Grid item="item" xs={ 3 }>{ removeButton(todo) }</Grid>
+		</Grid>
 	);
 };
 
