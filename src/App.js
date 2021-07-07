@@ -5,6 +5,7 @@ import TodoPane from './components/todoPane';
 import context from './core/context';
 import TaskPane from './components/taskPane';
 import ticker from './services/ticker';
+import { Grid } from '@material-ui/core';
 
 const App = () => {
 	useEffect(TaskManager.init, []);
@@ -14,7 +15,8 @@ const App = () => {
 	console.log(context.state);
 	return (
 		<div className={ `App ${ context.state.theme }` }>
-			<div> { TodoPane() } { TaskPane() } </div>
+			<Grid container="true">
+				{ TodoPane() } { TaskPane() } </Grid>
 		</div>
 	);
 };

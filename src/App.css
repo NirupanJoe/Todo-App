@@ -1,13 +1,9 @@
 .App {
 	text-align: center;
-}
-.todo-pane {
-	left: 0;
+	min-width: max-content;
+	min-height: max-content;
 }
 .pane {
-	position: absolute;
-	height: 100%;
-	width: 50%;
 	overflow: auto;
 }
 .light .todo-pane {
@@ -18,9 +14,6 @@
 }
 .App.dark {
 	color: white;
-}
-.task-pane {
-	right: 0;
 }
 .light .task-pane {
 	background: bisque;
