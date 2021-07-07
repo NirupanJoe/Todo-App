@@ -3,14 +3,14 @@ import context from '../../core/context';
 import { Checkbox, Grid, Box } from '@material-ui/core';
 import ClearIcon from '@material-ui/icons/Clear';
 
-const toggleButton = (todo) =>
+const ToggleButton = (todo, completed) =>
 	<Checkbox
 		className="todo-checkbox"
-		checked={ todo.completed }
+		checked={ completed }
 		onChange={ () => context.actions.toggleTodo(todo) }
 	/>;
 
-const removeButton = (todo) =>
+const RemoveButton = (todo) =>
 	<button
 		className="btn-x"
 		onClick={ () => context.actions.removeTodo(todo) }
@@ -30,9 +30,11 @@ const GridItem = (Component) =>
 const Todo = (todo) => {
 	const { id, text, completed } = todo;
 	const className = ` ${ completed ? 'todo-completed' : 'todo-active' }`;
-	const components = [toggleButton(todo),
+	const components = [
+		ToggleButton(todo, completed),
 		TextInput(text, todo),
-		removeButton(todo)];
+		RemoveButton(todo),
+	];
 
 	return (
 		<Grid
