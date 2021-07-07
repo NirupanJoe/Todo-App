@@ -1,33 +1,42 @@
 import { React } from 'react';
 import context from '../../core/context';
+import { Fab, Grid } from '@material-ui/core';
+import { Add, Clear } from '@material-ui/icons';
 
 const removeButton = (task) =>
-	<button
-		className="btn-x"
+	<Fab
+		color="secondary"
 		onClick={ () => context.actions.removeButton(task) }
 	>
-		X
-	</button>;
+		<Clear/>
+	</Fab>;
 
 const addButton = (task) =>
-	<button
-		className="btn"
+	<Fab
+		color="primary"
 		onClick={ () => {
 			context.actions.removeButton(task);
 			context.actions.addTaskFromTodo(task);
 		} }
 	>
-		+
-	</button>;
+		<Add/>
+	</Fab>;
 
 const Task = (task) => {
 	const { id, text } = task;
 
-	return <div key={ id }>
-		<span> { addButton(task)} </span>
-		<span> { removeButton(task) } </span>
-		<span>{ text }</span>
-	</div>;
+	return (
+		<Grid
+			key={ id }
+			container="true"
+			justify="center"
+			alignItems="center"
+		>
+			<Grid item="true" xs={ 2 }> { addButton(task)} </Grid>
+			<Grid item="true" xs={ 2 }> { removeButton(task) } </Grid>
+			<Grid item="true" xs={ 5 }>{ text }</Grid>
+		</Grid>
+	);
 };
 
 export default Task;
