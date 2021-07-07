@@ -1,16 +1,8 @@
 import TaskManager from '../services/taskManager';
 import TodoManager from '../services/todoManager';
 
-const increaseCount = ({ state }) => ({
-	count: state.count + 1,
-});
-
 const updateInput = ({ data }) => ({
 	input: data,
-});
-
-const updateColor = ({ data }) => ({
-	color: data,
 });
 
 const addTodo = ({ state }) => ({
@@ -69,9 +61,7 @@ const themeSelect = ({ data }) => ({
 
 const actions = {
 	addTodo,
-	increaseCount,
 	updateInput,
-	updateColor,
 	toggleTodo,
 	removeTodo,
 	toggleTodos,
