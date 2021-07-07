@@ -1,15 +1,17 @@
 import { React } from 'react';
 import context from '../../core/context';
 import EditIcon from '@material-ui/icons/Edit';
-import Button from '@material-ui/core/Button';
+import { Button, Grid } from '@material-ui/core';
 
 const EditButton = () =>
-	<Button
-		variant="contained"
-		disabled={ context.state.editing === null }
-		onClick={ context.actions.editingTodo }
-	>
-		<EditIcon/>
-	</Button>;
+	<Grid item="true" xs={ 2 }>
+		<Button
+			variant="contained"
+			disabled={ context.state.editing === null }
+			onClick={ context.actions.editingTodo }
+		>
+			<EditIcon/>
+		</Button>
+	</Grid>;
 
 export default EditButton;

@@ -9,7 +9,7 @@ const ToggleAllButton = () => {
 
 	return noTodos
 		? null
-		: <Grid xs={ 2 }>
+		: <Grid item="true" xs={ 2 }>
 			<Checkbox
 				checked={ isChecked }
 				onChange={ () => context.actions.toggleTodos(!isChecked) }

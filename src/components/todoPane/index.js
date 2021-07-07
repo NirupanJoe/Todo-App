@@ -5,15 +5,16 @@ import ClearButton from './clearButton';
 import FilterBar from './filterBar';
 import ActionButton from './actionButton';
 import ThemeSelect from './themeSelect';
+import { Grid } from '@material-ui/core';
 
 const TodoPane = () => {
 
 	return (
 		<div className="pane todo-pane">
 			<h3>Todo</h3>
-			<div id="todo-pane-input"> { ToggleAllButton() }
+			<Grid container="true" justify="center" alignItems="flex-end"> { ToggleAllButton() }
 				{ TodoInput() } { ActionButton() }
-			</div>
+			</Grid>
 			<div> { AddList() } </div>
 			<div> { ClearButton() } </div>
 			<div> { FilterBar() } </div>
