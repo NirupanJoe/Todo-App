@@ -3,7 +3,7 @@ import context from '../../core/context';
 import { Fab, Grid } from '@material-ui/core';
 import { Add, Clear } from '@material-ui/icons';
 
-const removeButton = (task) =>
+const RemoveButton = (task) =>
 	<Fab
 		color="secondary"
 		onClick={ () => context.actions.removeButton(task) }
@@ -11,7 +11,7 @@ const removeButton = (task) =>
 		<Clear/>
 	</Fab>;
 
-const addButton = (task) =>
+const AddButton = (task) =>
 	<Fab
 		color="primary"
 		onClick={ () => {
@@ -32,8 +32,8 @@ const Task = (task) => {
 			justify="center"
 			alignItems="center"
 		>
-			<Grid item="true" xs={ 2 }> { addButton(task)} </Grid>
-			<Grid item="true" xs={ 2 }> { removeButton(task) } </Grid>
+			<Grid item="true" xs={ 2 }> { AddButton(task)} </Grid>
+			<Grid item="true" xs={ 2 }> { RemoveButton(task) } </Grid>
 			<Grid item="true" xs={ 5 }>{ text }</Grid>
 		</Grid>
 	);

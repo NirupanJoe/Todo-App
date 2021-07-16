@@ -4,6 +4,6 @@ import FilterButton from './filterButton';
 const filters = ['all', 'active', 'completed'];
 
 const FilterBar = () =>
-	<div> { filters.map((filter) => FilterButton(filter)) } </div>;
+	<div> { filters.map(FilterButton) } </div>;
 
 export default FilterBar;
