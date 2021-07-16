@@ -16,7 +16,7 @@ const ClearButton = () => {
 				color="default"
 				onClick={ context.actions.clearButton }
 			>
-				<DeleteSweepTwoToneIcon/>
+				<DeleteSweepTwoToneIcon color="action"/>
 			</Button>
 		</Box>;
 };

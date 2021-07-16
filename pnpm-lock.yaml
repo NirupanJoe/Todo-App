@@ -5,6 +5,7 @@ specifiers:
   '@laufire/utils': ^2.5.5
   '@material-ui/core': ^4.11.4
   '@material-ui/icons': ^4.11.2
+  '@material-ui/styles': ^4.11.4
   '@testing-library/jest-dom': ^5.12.0
   '@testing-library/react': ^11.2.6
   '@testing-library/user-event': ^12.8.3
@@ -21,6 +22,7 @@ dependencies:
   '@laufire/utils': 2.7.0
   '@material-ui/core': 4.12.0_react-dom@17.0.2+react@17.0.2
   '@material-ui/icons': 4.11.2_f59eb073e9caf02ea612a2f8ee0acd9f
+  '@material-ui/styles': 4.11.4_react-dom@17.0.2+react@17.0.2
   '@testing-library/jest-dom': 5.14.1
   '@testing-library/react': 11.2.7_react-dom@17.0.2+react@17.0.2
   '@testing-library/user-event': 12.8.3

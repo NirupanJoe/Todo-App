@@ -1,7 +1,7 @@
 import { React } from 'react';
 import context from '../../core/context';
 import EditIcon from '@material-ui/icons/Edit';
-import { Button, Grid } from '@material-ui/core';
+import { Button, Grid, Tooltip } from '@material-ui/core';
 
 const EditButton = () =>
 	<Grid item="true" xs={ 2 }>
@@ -10,7 +10,7 @@ const EditButton = () =>
 			disabled={ context.state.editing === null }
 			onClick={ context.actions.editingTodo }
 		>
-			<EditIcon/>
+			<Tooltip title="Edit"><EditIcon color="primary"/></Tooltip>
 		</Button>
 	</Grid>;
 

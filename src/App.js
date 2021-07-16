@@ -5,18 +5,23 @@ import TodoPane from './components/todoPane';
 import context from './core/context';
 import TaskPane from './components/taskPane';
 import ticker from './services/ticker';
-import { Grid } from '@material-ui/core';
+import { Grid, ThemeProvider } from '@material-ui/core';
+import darkTheme from './components/darkTheme';
+import lightTheme from './components/lightTheme';
+
+const theme = () =>
+	(context.state.theme === 'dark' ? darkTheme : lightTheme);
 
 const App = () => {
 	useEffect(TaskManager.init, []);
 	useEffect(ticker.state, []);
 
-	// eslint-disable-next-line no-console
-	console.log(context.state);
 	return (
 		<div className={ `App ${ context.state.theme }` }>
-			<Grid container="true">
-				{ TodoPane() } { TaskPane() } </Grid>
+			<ThemeProvider theme={ theme() }>
+				<Grid container="true">
+					{ TodoPane() } { TaskPane() } </Grid>
+			</ThemeProvider>
 		</div>
 	);
 };

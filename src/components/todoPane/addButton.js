@@ -11,7 +11,7 @@ const AddButton = () =>
 			disabled={ context.state.input === '' }
 			onClick={ context.actions.addTodo }
 		>
-			<AddCircleOutlineIcon/>
+			<AddCircleOutlineIcon color="secondary"/>
 		</Button>
 	</Grid>;
 
