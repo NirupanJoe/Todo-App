@@ -5,18 +5,14 @@ import ThemeSelect from './themeSelect';
 import { Box, Typography } from '@material-ui/core';
 import Header from './header';
 
-const TodoPane = () => {
-
-	return (
-		<Box height="100vh" overflow="auto">
+const TodoPane = () =>
+		<Box bgcolor="primary.main" height="100vh" overflow="auto">
 			<Typography variant="h4" color="error">Todo</Typography>
 			{ Header() }
 			{ AddList() }
 			{ ClearButton() }
 			{ FilterBar() }
 			{ ThemeSelect() }
-		</Box>
-	);
-};
+		</Box>;
 
 export default TodoPane;
