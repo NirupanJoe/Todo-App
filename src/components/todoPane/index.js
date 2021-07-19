@@ -8,7 +8,7 @@ import Header from './header';
 const TodoPane = () => {
 
 	return (
-		<Box className="pane todo-pane"height="100vh" overflow="auto">
+		<Box height="100vh" overflow="auto">
 			<Typography variant="h4" color="error">Todo</Typography>
 			{ Header() }
 			{ AddList() }

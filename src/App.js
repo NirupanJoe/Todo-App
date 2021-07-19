@@ -16,9 +16,6 @@ const App = () => {
 	useEffect(TaskManager.init, []);
 	useEffect(ticker.state, []);
 
-	// eslint-disable-next-line no-console
-	console.log(context.state.theme);
-
 	return (
 		<Box className={ `App ${ context.state.theme }` }>
 			<ThemeProvider theme={ theme() }>
