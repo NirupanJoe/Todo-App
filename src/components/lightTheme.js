@@ -18,6 +18,7 @@ const lightTheme = createTheme({
 			disabledBackground: 'orange',
 			disabled: 'white',
 		},
+		type: 'light',
 	},
 });
 

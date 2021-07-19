@@ -25,7 +25,7 @@ const TextInput = (text, todo) =>
 	>{text}</Box>;
 
 const GridItem = (Component) =>
-	<Grid item="item" xs={ 3 }>{ Component }</Grid>;
+	<Grid item={ true } xs={ 3 }>{ Component }</Grid>;
 
 const Todo = (todo) => {
 	const { id, text, completed } = todo;
@@ -39,9 +39,9 @@ const Todo = (todo) => {
 	return (
 		<Grid
 			key={ id }
-			container="container"
+			container={ true }
 			direction="row"
-			justify="center"
+			justifyContent="center"
 			alignItems="center"
 			className={ className }
 		>

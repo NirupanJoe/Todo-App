@@ -7,13 +7,13 @@ import ActionButton from './actionButton';
 const Header = () =>
 	<Box>
 		<Grid
-			container="true"
+			container={ true }
 			justifyContent="center"
 			alignItems="flex-end"
 		>
-			<Grid item="true" xs={ 2 }>{ ToggleAllButton() }</Grid>
-			<Grid item="true" xs={ 4 }>{ TodoInput() }</Grid>
-			<Grid item="true" xs={ 2 }>{ ActionButton() }</Grid>
+			<Grid item={ true } xs={ 2 }>{ ToggleAllButton() }</Grid>
+			<Grid item={ true } xs={ 4 }>{ TodoInput() }</Grid>
+			<Grid item={ true } xs={ 2 }>{ ActionButton() }</Grid>
 		</Grid>
 	</Box>;
 

@@ -28,13 +28,13 @@ const Task = (task) => {
 	return (
 		<Grid
 			key={ id }
-			container="true"
-			justify="center"
+			container={ true }
+			justifyContent="center"
 			alignItems="center"
 		>
-			<Grid item="true" xs={ 2 }> { AddButton(task)} </Grid>
-			<Grid item="true" xs={ 2 }> { RemoveButton(task) } </Grid>
-			<Grid item="true" xs={ 5 }>{ text }</Grid>
+			<Grid item={ true } xs={ 2 }> { AddButton(task)} </Grid>
+			<Grid item={ true } xs={ 2 }> { RemoveButton(task) } </Grid>
+			<Grid item={ true } xs={ 5 }>{ text }</Grid>
 		</Grid>
 	);
 };

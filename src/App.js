@@ -5,7 +5,7 @@ import TodoPane from './components/todoPane';
 import context from './core/context';
 import TaskPane from './components/taskPane';
 import ticker from './services/ticker';
-import { Box, Grid, ThemeProvider } from '@material-ui/core';
+import { Box, Grid, Paper, ThemeProvider } from '@material-ui/core';
 import darkTheme from './components/darkTheme';
 import lightTheme from './components/lightTheme';
 
@@ -16,13 +16,18 @@ const App = () => {
 	useEffect(TaskManager.init, []);
 	useEffect(ticker.state, []);
 
+	// eslint-disable-next-line no-console
+	console.log(context.state.theme);
+
 	return (
 		<Box className={ `App ${ context.state.theme }` }>
 			<ThemeProvider theme={ theme() }>
-				<Grid container="true">
-					<Grid item="true"xs={ 6 }>{ TodoPane() }</Grid>
-					<Grid item="true"xs={ 6 }>{ TaskPane() }</Grid>
-				</Grid>
+				<Paper>
+					<Grid container={ true }>
+						<Grid item={ true } xs={ 6 }>{ TodoPane() }</Grid>
+						<Grid item={ true } xs={ 6 }>{ TaskPane() }</Grid>
+					</Grid>
+				</Paper>
 			</ThemeProvider>
 		</Box>
 	);
