@@ -5,7 +5,7 @@ import TodoPane from './components/todoPane';
 import context from './core/context';
 import TaskPane from './components/taskPane';
 import ticker from './services/ticker';
-import { Grid, ThemeProvider } from '@material-ui/core';
+import { Box, Grid, ThemeProvider } from '@material-ui/core';
 import darkTheme from './components/darkTheme';
 import lightTheme from './components/lightTheme';
 
@@ -17,12 +17,14 @@ const App = () => {
 	useEffect(ticker.state, []);
 
 	return (
-		<div className={ `App ${ context.state.theme }` }>
+		<Box className={ `App ${ context.state.theme }` }>
 			<ThemeProvider theme={ theme() }>
 				<Grid container="true">
-					{ TodoPane() } { TaskPane() } </Grid>
+					<Grid item="true"xs={ 6 }>{ TodoPane() }</Grid>
+					<Grid item="true"xs={ 6 }>{ TaskPane() }</Grid>
+				</Grid>
 			</ThemeProvider>
-		</div>
+		</Box>
 	);
 };
 

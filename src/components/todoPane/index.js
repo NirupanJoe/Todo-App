@@ -1,25 +1,21 @@
-import TodoInput from './todoInput';
 import AddList from './todoList';
-import ToggleAllButton from './toggleAllButton';
 import ClearButton from './clearButton';
 import FilterBar from './filterBar';
-import ActionButton from './actionButton';
 import ThemeSelect from './themeSelect';
-import { Grid } from '@material-ui/core';
+import { Box, Typography } from '@material-ui/core';
+import Header from './header';
 
 const TodoPane = () => {
 
 	return (
-		<Grid item="true" xs={ 6 } className="pane todo-pane">
-			<h3>Todo</h3>
-			<Grid container="true" justify="center" alignItems="flex-end"> { ToggleAllButton() }
-				{ TodoInput() } { ActionButton() }
-			</Grid>
-			<div> { AddList() } </div>
-			<div> { ClearButton() } </div>
-			<div> { FilterBar() } </div>
-			<div> { ThemeSelect() } </div>
-		</Grid>
+		<Box className="pane todo-pane"height="100vh" overflow="auto">
+			<Typography variant="h4" color="error">Todo</Typography>
+			{ Header() }
+			{ AddList() }
+			{ ClearButton() }
+			{ FilterBar() }
+			{ ThemeSelect() }
+		</Box>
 	);
 };
 

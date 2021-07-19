@@ -1,10 +1,10 @@
 import TaskList from "./taskList";
-import { Grid } from '@material-ui/core';
+import { Box, Grid, Typography } from '@material-ui/core';
 
 const TaskPane = () =>
-	<Grid item="true" xs={ 6 } className="pane task-pane">
-		<h3>Task</h3>
-		<div >{ TaskList() }</div>
-	</Grid>
+	<Box className="pane task-pane"height="100vh"overflow="auto">
+		<Typography variant="h4">Task</Typography>
+		{ TaskList() }
+	</Box>;
 
 export default TaskPane;

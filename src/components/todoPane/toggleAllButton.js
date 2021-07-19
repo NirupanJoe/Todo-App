@@ -1,7 +1,7 @@
 import { React } from 'react';
 import context from '../../core/context';
 import TodoManager from '../../services/todoManager';
-import { Checkbox, Grid } from '@material-ui/core';
+import { Checkbox } from '@material-ui/core';
 
 const ToggleAllButton = () => {
 	const isChecked = TodoManager.getActiveCount(context.state.todos) === 0;
@@ -9,12 +9,13 @@ const ToggleAllButton = () => {
 
 	return noTodos
 		? null
-		: <Grid item="true" xs={ 2 }>
-			<Checkbox
+		: <Checkbox
+			// eslint-disable-next-line indent
 				checked={ isChecked }
+			// eslint-disable-next-line indent
 				onChange={ () => context.actions.toggleTodos(!isChecked) }
-			/>
-		</Grid>;
+		// eslint-disable-next-line no-mixed-spaces-and-tabs
+		  />;
 };
 
 export default ToggleAllButton;
