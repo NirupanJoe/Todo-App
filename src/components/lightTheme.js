@@ -3,7 +3,7 @@ import { createTheme } from '@material-ui/core/styles';
 const lightTheme = createTheme({
 	palette: {
 		primary: {
-			light: '#b71c1c',
+			light: '#ffe0b2',
 			main: '#1b5e20',
 			dark: '#0d47a1',
 			contrastText: '#fff',
