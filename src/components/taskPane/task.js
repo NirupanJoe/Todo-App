@@ -5,6 +5,7 @@ import { Add, Clear } from '@material-ui/icons';
 
 const RemoveButton = (task) =>
 	<Fab
+		size="small"
 		color="secondary"
 		onClick={ () => context.actions.removeButton(task) }
 	>
@@ -13,6 +14,7 @@ const RemoveButton = (task) =>
 
 const AddButton = (task) =>
 	<Fab
+		size="small"
 		color="primary"
 		onClick={ () => {
 			context.actions.removeButton(task);
