@@ -1,12 +1,15 @@
 import { React } from 'react';
 import context from '../../core/context';
 import { TextField } from '@material-ui/core';
+import Remote from '../../services/remote';
 
 const getEnterKeyAction = () =>
-	(context.state.editing ? 'editingTodo' : 'addTodo');
+	(context.state.editing
+		? context.actions.editingTodo()
+		: Remote.createTodo(context.state.input));
 
 const actionKeys = {
-	Enter: () => context.actions[getEnterKeyAction()](),
+	Enter: () => getEnterKeyAction(),
 	Escape: () => context.actions.updateInput(''),
 };
 

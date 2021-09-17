@@ -1,14 +1,5 @@
-import config from '../core/config';
-import { rndString } from '@laufire/utils/random';
-
-const getTodo = (text) => ({
-	id: rndString(config.idLength),
-	text: text,
-	completed: false,
-});
-
-const addTodo = (todos, text) =>
-	(text === '' ? todos : todos.concat(getTodo(text)));
+const addTodo = (todos, todo) =>
+	todos.concat(todo);
 
 const toggleTodo = (todos, data) => todos.map((todo) => (todo.id !== data.id
 	? todo
