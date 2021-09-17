@@ -8,6 +8,7 @@ import ticker from './services/ticker';
 import { Box, Grid, Paper, ThemeProvider } from '@material-ui/core';
 import darkTheme from './components/darkTheme';
 import lightTheme from './components/lightTheme';
+import Remote from './services/remote';
 
 const theme = () =>
 	(context.state.theme === 'dark' ? darkTheme : lightTheme);
@@ -15,6 +16,7 @@ const theme = () =>
 const App = () => {
 	useEffect(TaskManager.init, []);
 	useEffect(ticker.state, []);
+	useEffect(Remote.fetchTodos, []);
 
 	return (
 		<Box className={ `App ${ context.state.theme }` }>

@@ -59,6 +59,10 @@ const themeSelect = ({ data }) => ({
 	theme: data,
 });
 
+const updateTodos = ({ data }) => ({
+	todos: data,
+});
+
 const actions = {
 	addTodo,
 	updateInput,
@@ -73,6 +77,7 @@ const actions = {
 	removeButton,
 	addTaskFromTodo,
 	themeSelect,
+	updateTodos,
 };
 
 export default actions;
