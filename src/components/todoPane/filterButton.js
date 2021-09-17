@@ -11,9 +11,8 @@ const FilterButton = (filter) => {
 
 	return noTodos
 		? null
-		: <Box component="span" m={ 1 }>
+		: <Box key={ filter } component="span" m={ 1 }>
 			<Button
-				key={ filter }
 				variant="contained"
 				color={ style }
 				onClick={ () => context.actions.filterButton(filter) }
