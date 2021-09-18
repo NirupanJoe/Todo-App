@@ -2,6 +2,7 @@ import { React } from 'react';
 import context from '../../core/context';
 import { Checkbox, Grid, Box } from '@material-ui/core';
 import ClearIcon from '@material-ui/icons/Clear';
+import Remote from '../../services/remote';
 
 const ToggleButton = (todo) => {
 	const { id, completed } = todo;
@@ -23,7 +24,7 @@ const RemoveButton = (todo) => {
 			key={ id }
 
 			className="btn-x"
-			onClick={ () => context.actions.removeTodo(todo) }
+			onClick={ () => Remote.removeTodo(todo) }
 		>
 			<ClearIcon/>
 		</button>);

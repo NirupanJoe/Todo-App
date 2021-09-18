@@ -18,6 +18,12 @@ const Remote = {
 
 		context.actions.addTodo(result.data);
 	},
+
+	removeTodo: async (todo) => {
+		await axios.delete(`http://localhost:3500/todo/${ todo.id }`);
+
+		context.actions.removeTodo(todo);
+	},
 };
 
 export default Remote;
