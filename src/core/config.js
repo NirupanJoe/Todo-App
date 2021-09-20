@@ -5,6 +5,7 @@ const config = {
 	idLength: 16,
 	tickerDelay: millisecond * second,
 	maxTaskCount: 1,
+	maxTaskLength: 10,
 	themes: [
 		'light', 'dark',
 	],
