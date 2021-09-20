@@ -44,7 +44,7 @@ const Remote = {
 	fetchTasks: async () => {
 		const result = await axios.get('http://localhost:3500/task');
 
-		context.actions.updateTask(result.data.task);
+		context.actions.updateTask(result.data);
 	},
 };
 
