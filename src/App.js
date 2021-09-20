@@ -15,6 +15,7 @@ const theme = () =>
 const App = () => {
 	useEffect(ticker.state, []);
 	useEffect(Remote.fetchTodos, []);
+	useEffect(Remote.fetchTasks, []);
 
 	return (
 		<Box className={ `App ${ context.state.theme }` }>

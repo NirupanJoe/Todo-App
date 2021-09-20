@@ -63,6 +63,10 @@ const updateTodos = ({ data }) => ({
 	todos: data,
 });
 
+const updateTask = ({ data }) => ({
+	tasks: data,
+});
+
 const actions = {
 	addTodo,
 	updateInput,
@@ -78,6 +82,7 @@ const actions = {
 	addTaskFromTodo,
 	themeSelect,
 	updateTodos,
+	updateTask,
 };
 
 export default actions;
