@@ -12,7 +12,7 @@ const ClearButton = () => {
 		? null
 		: <Box component="span">
 			<Button
-				variant="outline"
+				variant="outlined"
 				color="default"
 				onClick={ context.actions.clearButton }
 			>
