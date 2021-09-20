@@ -12,7 +12,7 @@ const ToggleButton = (todo) => {
 			key={ id }
 			className="todo-checkbox"
 			checked={ completed }
-			onChange={ () => context.actions.toggleTodo(todo) }
+			onChange={ () => Remote.toggleTodo(todo) }
 		/>);
 };
 

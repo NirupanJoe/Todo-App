@@ -32,6 +32,14 @@ const Remote = {
 
 		context.actions.editingTodo();
 	},
+
+	toggleTodo: async (todo) => {
+		await axios.put(`http://localhost:3500/todo/${ todo.id }`, {
+			completed: !todo.completed,
+		});
+
+		context.actions.toggleTodo(todo);
+	},
 };
 
 export default Remote;
