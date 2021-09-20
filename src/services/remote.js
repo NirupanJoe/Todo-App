@@ -9,10 +9,10 @@ const Remote = {
 		context.actions.updateTodos(result.data);
 	},
 
-	createTodo: async (text) => {
-		const result = text !== '' && await axios
+	createTodo: async ({ input }) => {
+		const result = input !== '' && await axios
 			.post('http://localhost:3500/todo', {
-				text: text,
+				text: input,
 				completed: false,
 			});
 
@@ -23,6 +23,14 @@ const Remote = {
 		await axios.delete(`http://localhost:3500/todo/${ todo.id }`);
 
 		context.actions.removeTodo(todo);
+	},
+
+	editingTodo: async ({ input, editing }) => {
+		await axios.put(`http://localhost:3500/todo/${ editing.id }`, {
+			text: input,
+		});
+
+		context.actions.editingTodo();
 	},
 };
 

@@ -9,7 +9,7 @@ const AddButton = () =>
 		variant="contained"
 		color="primary"
 		disabled={ context.state.input === '' }
-		onClick={ () => Remote.createTodo(context.state.input) }
+		onClick={ () => Remote.createTodo(context.state) }
 	>
 		<AddCircleOutlineIcon color="secondary"/>
 	</Button>;
