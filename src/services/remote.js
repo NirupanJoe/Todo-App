@@ -9,10 +9,10 @@ const Remote = {
 		context.actions.updateTodos(result.data);
 	},
 
-	createTodo: async ({ input }) => {
-		const result = input !== '' && await axios
+	createTodo: async (text) => {
+		const result = text !== '' && await axios
 			.post('http://localhost:3500/todo', {
-				text: input,
+				text: text,
 				completed: false,
 			});
 
