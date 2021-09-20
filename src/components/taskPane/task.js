@@ -1,5 +1,4 @@
 import { React } from 'react';
-import context from '../../core/context';
 import { Fab, Grid } from '@material-ui/core';
 import { Add, Clear } from '@material-ui/icons';
 import Remote from '../../services/remote';
@@ -19,7 +18,7 @@ const AddButton = (task) =>
 		color="primary"
 		onClick={ () => {
 			Remote.removeTask(task);
-			context.actions.addTaskFromTodo(task);
+			Remote.createTodo(task.text);
 		} }
 	>
 		<Add/>
