@@ -1,12 +1,12 @@
 import config from '../core/config';
-import context from '../core/context';
+import Remote from './remote';
 import taskRetriever from './taskRetriever';
 
 const state = () => {
-	const { addTask } = context.actions;
 	const { tickerDelay } = config;
 
-	setInterval(() => taskRetriever.getTask().map(addTask), tickerDelay);
+	setInterval(() =>
+		taskRetriever.getTask().map(Remote.createTask), tickerDelay);
 };
 
 const ticker = {

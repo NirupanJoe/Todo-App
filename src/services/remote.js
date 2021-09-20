@@ -46,6 +46,14 @@ const Remote = {
 
 		context.actions.updateTask(result.data);
 	},
+
+	createTask: async (text) => {
+		const result = await axios.post('http://localhost:3500/task', {
+			text,
+		});
+
+		context.actions.addTask(result.data);
+	},
 };
 
 export default Remote;
