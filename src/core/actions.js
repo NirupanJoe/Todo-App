@@ -47,7 +47,7 @@ const addTask = ({ state, data }) => ({
 	tasks: TaskManager.addTask(state.tasks, data),
 });
 
-const removeButton = ({ state, data }) => ({
+const removeTask = ({ state, data }) => ({
 	tasks: TaskManager.removeTask(state.tasks, data),
 });
 
@@ -78,7 +78,7 @@ const actions = {
 	setEditing,
 	editingTodo,
 	addTask,
-	removeButton,
+	removeTask,
 	addTaskFromTodo,
 	themeSelect,
 	updateTodos,

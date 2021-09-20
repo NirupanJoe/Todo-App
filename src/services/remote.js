@@ -54,6 +54,12 @@ const Remote = {
 
 		context.actions.addTask(result.data);
 	},
+
+	removeTask: async (task) => {
+		await axios.delete(`http://localhost:3500/task/${ task.id }`);
+
+		context.actions.removeTask(task);
+	},
 };
 
 export default Remote;
